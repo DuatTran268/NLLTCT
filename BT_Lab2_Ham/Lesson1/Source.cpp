@@ -1,5 +1,3 @@
-
-
 // thư viện hàm
 #include<iostream>
 #include<conio.h>
