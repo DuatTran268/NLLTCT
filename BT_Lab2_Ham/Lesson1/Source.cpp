@@ -1,11 +1,12 @@
-﻿// hằng số	viết hoa TEN_HANG
-#define PI 3.1415926
-
 // thư viện hàm
 #include<iostream>
 #include<conio.h>
 
 using namespace std;
+
+// hằng số	viết hoa TEN_HANG
+#define PI 3.1415926
+
 
 // khai báo nguyên mẫu hàm
 double TinhChuViHinhTron(double r);

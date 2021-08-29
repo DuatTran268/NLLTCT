@@ -38,7 +38,7 @@ int main()
 double TinhDoCao(double phi, double delta, double h)
 {
 	double Altitude;
-	Altitude = asin(sin(phi)*sin(delta) + cos(phi)*cos(delta)*cos(h)); // ok rồi nè Duạt ơi :d
+	Altitude = asin(sin(phi)*sin(delta) + cos(phi)*cos(delta)*cos(h));
 	return Altitude;
 }
 double TinhPhuongVi(double phi, double delta, double h, double altitude	)
