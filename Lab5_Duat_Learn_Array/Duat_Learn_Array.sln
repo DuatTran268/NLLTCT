@@ -13,6 +13,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Lesson5_TimKiem", "Lesson5_
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Lesson4_XoaMang", "Lesson4_XoaMang\Lesson4_XoaMang.vcxproj", "{034C86BE-2836-4ACE-A66A-71B3D4A1E3FB}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Lesson6_CacKyThuatChung", "Lesson6_CacKyThuatChung\Lesson6_CacKyThuatChung.vcxproj", "{45EADC6D-5252-4A9C-84CE-47AD051DFA7D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -61,6 +63,14 @@ Global
 		{034C86BE-2836-4ACE-A66A-71B3D4A1E3FB}.Release|x64.Build.0 = Release|x64
 		{034C86BE-2836-4ACE-A66A-71B3D4A1E3FB}.Release|x86.ActiveCfg = Release|Win32
 		{034C86BE-2836-4ACE-A66A-71B3D4A1E3FB}.Release|x86.Build.0 = Release|Win32
+		{45EADC6D-5252-4A9C-84CE-47AD051DFA7D}.Debug|x64.ActiveCfg = Debug|x64
+		{45EADC6D-5252-4A9C-84CE-47AD051DFA7D}.Debug|x64.Build.0 = Debug|x64
+		{45EADC6D-5252-4A9C-84CE-47AD051DFA7D}.Debug|x86.ActiveCfg = Debug|Win32
+		{45EADC6D-5252-4A9C-84CE-47AD051DFA7D}.Debug|x86.Build.0 = Debug|Win32
+		{45EADC6D-5252-4A9C-84CE-47AD051DFA7D}.Release|x64.ActiveCfg = Release|x64
+		{45EADC6D-5252-4A9C-84CE-47AD051DFA7D}.Release|x64.Build.0 = Release|x64
+		{45EADC6D-5252-4A9C-84CE-47AD051DFA7D}.Release|x86.ActiveCfg = Release|Win32
+		{45EADC6D-5252-4A9C-84CE-47AD051DFA7D}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
