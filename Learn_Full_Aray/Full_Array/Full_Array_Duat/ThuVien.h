@@ -129,6 +129,7 @@ void TimSoDuongTrongMang(Array a, int n) {
 	}
 }
 
+// case 12: Tìm các số nguyên trong mảng
 bool KiemTraSoNguyenTo(int n) {
 	if (n < 2)
 		return false;
@@ -148,6 +149,7 @@ void XuatCacSoNguyenTo(Array a, int n) {
 	}
 }
 
+// case 13: Tìm các số chính phương trong mảng
 bool KiemTraSoChinhPhuong(int n) {
 	int i = sqrt(n);
 	if (i * i == n)
@@ -166,4 +168,24 @@ void XuatSoChinhPhuong(Array a, int n) {
 			cout << a[i] << "\t";
 		}
 	}
+}
+
+// case 14: Thêm giá trị x vào vị trí i 
+void ThemGiaTriVaoViTri(Array a, int& n, int x, int vt) {
+	for (int i = n; i > vt; i--)
+	{
+		a[i] = a[i - 1];
+	}
+	a[vt] = x;
+	n++;
+}
+
+// case 15: Thêm giá trị vào đầu mảng
+void ThemGiaTriVaoDauMang(Array a, int& n, int x) {
+	ThemGiaTriVaoViTri(a, n, x, 0);
+}
+
+// case 16: Thêm giá trị vào cuối mảmg
+void ThemGiaTriVaoCuoiMang(Array a, int& n, int x) {
+	ThemGiaTriVaoViTri(a, n, x, n);
 }

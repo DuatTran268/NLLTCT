@@ -12,7 +12,7 @@ using namespace std;
 
 void ChayChuongTrinh() {
 	int n = 0;
-	int menu, soMenu = 13;
+	int menu, soMenu = 16;
 	Array a;
 	do
 	{

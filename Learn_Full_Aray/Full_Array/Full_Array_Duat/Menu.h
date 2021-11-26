@@ -1,4 +1,4 @@
-#pragma once
+﻿#pragma once
 void XuatMenu() {
 	cout << endl << "\n --------- CAC KY THUAT XU LY MANG ------------";
 	cout << endl << " 0. Thoat chuong trinh";
@@ -16,6 +16,10 @@ void XuatMenu() {
 	cout << endl << " 11. Tim so duong trong mang";
 	cout << endl << " 12. Tim tat ca cac so nguyen to trong mang";
 	cout << endl << " 13. Tim tat ca cac so chinh phuong trong mang";
+	// thêm vào vị trí
+	cout << endl << " 14. Them gia tri x vao vi tri i";
+	cout << endl << " 15. Them gia tri vao dau mang";
+	cout << endl << " 16. Them gia tri vao cuoi mang";
 
 	cout << endl << "\n-------------------- END ------------------";
 
@@ -37,7 +41,8 @@ int ChonMenu(int soMenu) {
 
 void XuLyMenu(Array a, int menu, int& n) {
 	system("cls");
-	int kq, x;
+	int x = 0;
+	int kq, vt;
 	int i = 0;
 	switch (menu)
 	{
@@ -77,6 +82,7 @@ void XuLyMenu(Array a, int menu, int& n) {
 		XuatMang(a, n);
 		/*do
 		{
+
 		} while (i <= 0);*/
 		cout << endl << "\n Nhap vao vi tri i trong mang";
 		cin >> i;
@@ -141,6 +147,43 @@ void XuLyMenu(Array a, int menu, int& n) {
 		XuatSoChinhPhuong(a, n);
 		break;
 
+	case 14:
+		cout << endl << " 14. Them gia tri x vao vi tri i";
+		cout << endl << "\n Xem mang ban dau";
+		XuatMang(a, n);
+		do
+		{
+			cout << endl << "\n Nhap vao vi tri can them: i =  ";
+			cin >> vt;
+		} while (vt <= 0 || vt > n);
+		cout << endl << "\n Nhap vao gia tri can them:  ";
+		cin >> x;
+		cout << endl << "\n Mang say khi nhap vao gia tri x = " << x << " vao vi tri i = " << i << " la:  ";
+		ThemGiaTriVaoViTri(a, n, x, vt);
+		XuatMang(a, n);
+		break;
+
+	case 15:
+		cout << endl << " 15. Them gia tri vao dau mang";
+		cout << endl << "\n Xem mang ban dau";
+		XuatMang(a, n);
+		cout << endl << "\n Nhap vao gia tri x = " << x << " can them vao dau mang la: ";
+		cin >> x;
+		ThemGiaTriVaoDauMang(a, n, x);
+		cout << endl << "\n Mang sau khi them x = " << x << " cann them vao dau mang la: ";
+		XuatMang(a, n);
+		break;
+
+	case 16:
+		cout << endl << " 16. Them gia tri vao cuoi mang";
+		cout << endl << "\n Xem mang ban dau";
+		XuatMang(a, n);
+		cout << endl << "\n Nhap vao gia tri x = " << x << " can them vao cuoi mang la: ";
+		cin >> x;
+		ThemGiaTriVaoCuoiMang(a, n, x);
+		cout << endl << "\n Mang sau khi them x = " << x << " vao vi tri cuoi mang la: ";
+		XuatMang(a, n);
+		break;
 
 	default:
 		break;
