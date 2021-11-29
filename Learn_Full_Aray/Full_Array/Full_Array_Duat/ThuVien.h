@@ -189,3 +189,40 @@ void ThemGiaTriVaoDauMang(Array a, int& n, int x) {
 void ThemGiaTriVaoCuoiMang(Array a, int& n, int x) {
 	ThemGiaTriVaoViTri(a, n, x, n);
 }
+
+// case 17: Kiểm tra giá trị x nhập vào có trong mảng
+bool KiemTraGiaTriXTrongMang(Array a, int n, int x) {
+	for (int i = 0; i < n; i++)
+	{
+		if (a[i] == x) {
+			cout << endl << " Gia tri nhap vao x = " << x << " nam trong mang";
+			return true;
+		}
+	}
+	cout << endl << " Gia tri nhap vao x = " << x << " khong nam trong mang";
+	return false;
+}
+
+// case 18 Kiểm tra vị trí nhập vào có tồn tại trong mảng
+bool KiemTraViTriCoTonTaiTrongMang(Array a, int n, int vt) {
+	if (vt <= 0 || vt > n) {
+		cout << endl << " Vi tri = " << vt << " vua nhap vao khong ton tai trong mang";
+		return false;
+	}
+	cout << endl << " Vi tri = " << vt << " ton tai trong mang";
+	return false;
+}
+
+// case 19 kiểm tra mảng có phải là số toàn dương ko
+bool KiemTraMangCoToanSoDuong(Array a, int n) {
+	for (int i = 0; i < n; i++)
+	{
+		if (a[i] < 0)
+		{
+			cout << endl << "\n Mang vua nhap vao ko phia la mang toan so duong";
+			return false;
+		}
+	}
+	cout << endl << "\n Mang vua nhap vao la mang toan so duong";
+	return true;
+}

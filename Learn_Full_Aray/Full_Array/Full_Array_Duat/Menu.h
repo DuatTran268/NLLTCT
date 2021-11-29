@@ -20,6 +20,13 @@ void XuatMenu() {
 	cout << endl << " 14. Them gia tri x vao vi tri i";
 	cout << endl << " 15. Them gia tri vao dau mang";
 	cout << endl << " 16. Them gia tri vao cuoi mang";
+	// Kiểm tra 
+	cout << endl << " 17. Kiem tra gia tri x nhap vao co ton tai trong mang";
+	cout << endl << " 18. Kiem tra vi tri nhap vao co ton tai trong mang";
+	cout << endl << " 19. Kiem tra mang co phai la mang toan duong";
+	cout << endl << " 20. Kiem tra cac so nguyen to trong mang";
+	cout << endl << " 21. Kiem tra so chinh phuong trong mang";
+
 
 	cout << endl << "\n-------------------- END ------------------";
 
@@ -41,7 +48,7 @@ int ChonMenu(int soMenu) {
 
 void XuLyMenu(Array a, int menu, int& n) {
 	system("cls");
-	int x = 0;
+	int x;
 	int kq, vt;
 	int i = 0;
 	switch (menu)
@@ -184,6 +191,48 @@ void XuLyMenu(Array a, int menu, int& n) {
 		cout << endl << "\n Mang sau khi them x = " << x << " vao vi tri cuoi mang la: ";
 		XuatMang(a, n);
 		break;
+
+	case 17:
+		cout << endl << " 17. Kiem tra gia tri x nhap vao co ton tai";
+		cout << endl << "\n Xem mang ban dau";
+		XuatMang(a, n);
+		cout << endl << "\n Nhap vao gia tri x = ";
+		cin >> x;
+		KiemTraGiaTriXTrongMang(a, n, x);
+		break;
+
+	case 18:
+		cout << endl << " 18. Kiem tra vi tri nhap vao co ton tai trong mang";
+		cout << endl << "\n Xem lai mang ban dau";
+		XuatMang(a, n);
+		cout << endl << "\n Nhap vao vi tri kiem tra:  ";
+		cin >> vt;
+		KiemTraViTriCoTonTaiTrongMang(a, n, vt);
+		break;
+
+	case 19:
+		cout << endl << " 19. Kiem tra mang co phai so toan duong";
+		cout << endl << "\n Xem lai mang ban dau";
+		XuatMang(a, n);
+		KiemTraMangCoToanSoDuong(a, n);
+		break;
+
+	case 20:
+		cout << endl << " 20. Kiem tra cac so nguyen to trong mang";
+		cout << endl << "\n Xem mang ban dau";
+		XuatMang(a, n);
+		cout << endl << "\n Xuat mang cac so nguyen to";
+		XuatCacSoNguyenTo(a, n);
+		break;
+
+	case 21:
+		cout << endl << " 21. Kiem tra cac so chinh phuong trong mang";
+		cout << endl << "\n Xem mang ban dau";
+		XuatMang(a, n);
+		cout << endl << "\n Xuat mang cac so chinh phuong";
+		XuatSoChinhPhuong(a, n);
+		break;
+
 
 	default:
 		break;
