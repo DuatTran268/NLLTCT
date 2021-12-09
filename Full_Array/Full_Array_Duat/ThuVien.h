@@ -30,7 +30,6 @@ void NhapMangTuKey(Array a, int& n) {
 	}
 }
 
-
 void XuatMang(Array a, int n) {
 	cout << endl << "\n Xuat Mang:\t";
 	for (int i = 0; i < n; i++)
@@ -39,7 +38,6 @@ void XuatMang(Array a, int n) {
 	}
 }
 
-// case 4: tìm vị trí của phần tử x trong mảng nhập vào
 void TimViTriCuaPhanTuXNhapVao(Array a, int n, int x) {
 	for (int i = 0; i < n; i++)
 	{
@@ -50,7 +48,6 @@ void TimViTriCuaPhanTuXNhapVao(Array a, int n, int x) {
 	}
 }
 
-// case 5: tìm giá trị x trong mảng
 void NhapVaoViTriIXuatRaGiaTriX(Array a, int n, int x) {
 	for (int i = 0; i < n; i++)
 	{
@@ -61,7 +58,6 @@ void NhapVaoViTriIXuatRaGiaTriX(Array a, int n, int x) {
 	}
 }
 
-// case 6: Tìm giá trị nhỏ nhất trong mảng
 int TimGiaTriNhoNhatTrongMang(Array a, int n) {
 	// gán giả sử ban đầu biến min = vị trí 0 trong mảng a
 	int min = a[0];
@@ -77,7 +73,6 @@ int TimGiaTriNhoNhatTrongMang(Array a, int n) {
 	return min;
 }
 
-// case 7: Tìm giá trị lớn nhất trong mảng
 int TimGiaTriLonNhatTrongMang(Array a, int n) {
 	int max = a[0];
 	for (int i = 0; i < n; i++) {
@@ -88,7 +83,6 @@ int TimGiaTriLonNhatTrongMang(Array a, int n) {
 	return max;
 }
 
-// case 8: Tìm số lẻ trong mảng
 void TimSoLeTrongMang(Array a, int n) {
 	cout << endl << "\n Xem so le:\t";
 	for (int i = 0; i < n; i++){
@@ -98,7 +92,6 @@ void TimSoLeTrongMang(Array a, int n) {
 	}
 }
 
-// case 9: Tìm các số chẵn trong mảng
 void TimSoChanTrongMang(Array a, int n) {
 	cout << endl << "\n Xem so chan:\t";
 	for (int i = 0; i < n; i++) {
@@ -108,8 +101,6 @@ void TimSoChanTrongMang(Array a, int n) {
 	}
 }
 
-
-// case 10: Tìm số âm trong mảng
 void TimSoAmTrongMang(Array a, int n) {
 	cout << endl << "\n Xem so am:\t";
 	for (int i = 0; i < n; i++) {
@@ -119,7 +110,6 @@ void TimSoAmTrongMang(Array a, int n) {
 	}
 }
 
-// case 11: Tìm số dương trong mảng
 void TimSoDuongTrongMang(Array a, int n) {
 	cout << endl << "\n Xem so duong:\t";
 	for (int i = 0; i < n; i++) {
@@ -170,7 +160,6 @@ void XuatSoChinhPhuong(Array a, int n) {
 	}
 }
 
-// case 14: Thêm giá trị x vào vị trí i 
 void ThemGiaTriVaoViTri(Array a, int& n, int x, int vt) {
 	for (int i = n; i > vt; i--)
 	{
@@ -180,17 +169,14 @@ void ThemGiaTriVaoViTri(Array a, int& n, int x, int vt) {
 	n++;
 }
 
-// case 15: Thêm giá trị vào đầu mảng
 void ThemGiaTriVaoDauMang(Array a, int& n, int x) {
 	ThemGiaTriVaoViTri(a, n, x, 0);
 }
 
-// case 16: Thêm giá trị vào cuối mảmg
 void ThemGiaTriVaoCuoiMang(Array a, int& n, int x) {
 	ThemGiaTriVaoViTri(a, n, x, n);
 }
 
-// case 17: Kiểm tra giá trị x nhập vào có trong mảng
 bool KiemTraGiaTriXTrongMang(Array a, int n, int x) {
 	for (int i = 0; i < n; i++)
 	{
@@ -203,7 +189,6 @@ bool KiemTraGiaTriXTrongMang(Array a, int n, int x) {
 	return false;
 }
 
-// case 18 Kiểm tra vị trí nhập vào có tồn tại trong mảng
 bool KiemTraViTriCoTonTaiTrongMang(Array a, int n, int vt) {
 	if (vt <= 0 || vt > n) {
 		cout << endl << " Vi tri = " << vt << " vua nhap vao khong ton tai trong mang";
@@ -213,7 +198,6 @@ bool KiemTraViTriCoTonTaiTrongMang(Array a, int n, int vt) {
 	return false;
 }
 
-// case 19 kiểm tra mảng có phải là số toàn dương ko
 bool KiemTraMangCoToanSoDuong(Array a, int n) {
 	for (int i = 0; i < n; i++)
 	{
@@ -225,4 +209,114 @@ bool KiemTraMangCoToanSoDuong(Array a, int n) {
 	}
 	cout << endl << "\n Mang vua nhap vao la mang toan so duong";
 	return true;
+}
+
+// sắp xếp đổi chỗ trực tiếp Interchange sort
+void HoanVi(int& x, int& y) {
+	int temp = x;
+	x = y;
+	y = temp;
+}
+
+void SapXepMangTangDan(Array a, int n) {
+	for (int i = 0; i < n; i++)
+	{
+		for (int j = i + 1; j < n; j++)
+		{
+			if (a[i] > a[j]) {
+				HoanVi(a[i], a[j]);
+			}
+		}
+	}
+}
+
+void SapXepMangGiamDan(Array a, int n) {
+	for (int i = 0; i < n; i++)
+	{
+		for (int j = i+1; j < n; j++)
+		{
+			if (a[i] < a[j])
+			{
+				HoanVi(a[i], a[j]);
+			}
+		}
+	}
+}
+
+int TinhTongCacSoDuong(Array a, int n) {
+	int sum = 0;
+	cout << endl << "\n Xem cac so duong:\t";
+	for (int i = 0; i < n; i++)
+	{
+		if (a[i] > 0) {
+			cout << a[i] << "\t";
+			sum += a[i];
+		}
+	}
+	return sum;
+}
+
+int TinhTongCacSoAm(Array a, int n) {
+	int sum = 0;
+	cout << endl << "\n Xem cac so am:\t";
+	for (int i = 0; i < n; i++)
+	{// nếu phần tử i trong mảng a nhỏ hơn 0 thực hiện xuất các số âm ra và thực hiện tính tổng các số âm đó
+		if (a[i] < 0) {
+			cout << a[i] << "\t";
+			sum += a[i];
+		}
+	}
+	return sum;
+}
+
+int TinhTongCacSoChan(Array a, int n) {
+	int sum = 0;
+	cout << endl << "\n Xem cac so chan:\t";
+	for (int i = 0; i < n; i++)
+	{
+		if (a[i] % 2 == 0) {
+			cout << "\t" << a[i];
+			sum += a[i];
+		}
+	}
+	return sum;
+}
+
+int TinhTongCacSoLe(Array a, int n) {
+	int sum = 0;
+	cout << endl << "\n Xem cac so le:\t";
+	for (int i = 0; i < n; i++)
+	{
+		if (a[i] % 2 != 0) {
+			cout << a[i] << "\t";
+			sum += a[i];
+		}
+	}
+	return sum;
+}
+
+int TinhTongCacSoNguyenTo(Array a, int n) {
+	int sum = 0;
+	cout << endl << "\n Xem so nguyen to:\t";
+	for (int i = 0; i < n; i++)
+	{
+		if (KiemTraSoNguyenTo(a[i])) {
+			cout << a[i] << "\t";
+			sum += a[i];
+		}
+	}
+	return sum;
+}
+
+int TinhTongCacSoChinhPhuong(Array a, int n) {
+	int sum = 0;
+	cout << endl << "\n Xem so chinh phuong:\t";
+	for (int i = 0; i < n; i++)
+	{
+		if (KiemTraSoChinhPhuong(a[i]) == true) {
+			cout << a[i] << "\t";
+			sum += a[i];
+		}
+	}
+	return sum;
 }
