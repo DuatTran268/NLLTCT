@@ -2,13 +2,10 @@
 #include<conio.h>
 #include<cstdlib>
 
-
 using namespace std;
-
 
 #include"ThuVien.h"
 #include"Menu.h"
-
 
 void ChayChuongTrinh() {
 	int n = 0;
@@ -19,11 +16,9 @@ void ChayChuongTrinh() {
 		menu = ChonMenu(soMenu);
 		XuLyMenu(a, menu, n);
 	} while (menu);
-
 }
 
 int main() {
 	ChayChuongTrinh();
 	return 1;
-
 }

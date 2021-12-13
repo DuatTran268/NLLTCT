@@ -1,52 +1,50 @@
 ﻿#pragma once
 void XuatMenu() {
 	cout << endl << "\n --------- CAC KY THUAT XU LY MANG ------------";
-	cout << endl << " 0. Thoat chuong trinh";
-	cout << endl << " 1. Nhap mang tu dong";
-	cout << endl << " 2. Nhap mang bang tay";
-	cout << endl << " 3. Xuat mang da nhap";
-	// search array element
-	cout << endl << " 4. Tim vi tri cua phan tu x trong mang nhap vao";
-	cout << endl << " 5. Tim gia tri x trong mang";
-	cout << endl << " 6. Tim gia tri nho nhat trong mang";
-	cout << endl << " 7. Tim gia tri lon nhat trong mang";
-	cout << endl << " 8. Tim so le trong mang";
-	cout << endl << " 9. Tim so chan trong mang";
+	cout << endl << " 0.  Thoat chuong trinh";
+	cout << endl << " 1.  Nhap mang tu dong";
+	cout << endl << " 2.  Nhap mang bang tay";
+	cout << endl << " 3.  Xuat mang da nhap";
+	// tìm kiếm  (search array element)
+	cout << endl << " 4.  Tim vi tri cua phan tu x trong mang nhap vao";
+	cout << endl << " 5.  Tim gia tri x trong mang";
+	cout << endl << " 6.  Tim gia tri nho nhat trong mang";
+	cout << endl << " 7.  Tim gia tri lon nhat trong mang";
+	cout << endl << " 8.  Tim so le trong mang";
+	cout << endl << " 9.  Tim so chan trong mang";
 	cout << endl << " 10. Tim so am trong mang";
 	cout << endl << " 11. Tim so duong trong mang";
 	cout << endl << " 12. Tim tat ca cac so nguyen to trong mang";
 	cout << endl << " 13. Tim tat ca cac so chinh phuong trong mang";
-	// thêm vào vị trí
+	// thêm vào vị trí  (add to position)
 	cout << endl << " 14. Them gia tri x vao vi tri i";
 	cout << endl << " 15. Them gia tri vao dau mang";
 	cout << endl << " 16. Them gia tri vao cuoi mang";
-	// Kiểm tra 
+	// Kiểm tra (check)
 	cout << endl << " 17. Kiem tra gia tri x nhap vao co ton tai trong mang";
 	cout << endl << " 18. Kiem tra vi tri nhap vao co ton tai trong mang";
 	cout << endl << " 19. Kiem tra mang co phai la mang toan duong";
 	cout << endl << " 20. Kiem tra cac so nguyen to trong mang";
 	cout << endl << " 21. Kiem tra so chinh phuong trong mang";
-	// sắp xếp
+	// sắp xếp sort
 	cout << endl << " 22. Sap xep mang tang dan";
 	cout << endl << " 23. Sap xep mang giam dan";
-	// Tính tổng
+	// Tính tổng sum 
 	cout << endl << " 24. Tinh tong cac so duong";
 	cout << endl << " 25. Tinh tong cac so am";
 	cout << endl << " 26. Tinh tong cac so chan";
 	cout << endl << " 27. Tinh tong cac so le";
 	cout << endl << " 28. Tinh tong cac so nguyen to";
-	cout << endl << " 30. Tinh tong cac so chinh phuong";
+	cout << endl << " 29. Tinh tong cac so chinh phuong";
 	// tính tích
-	cout << endl << " 31. Tinh tich cac so duong";
-	cout << endl << " 32. Tinh tich cac so am";
-	cout << endl << " 33. Tinh tich cac so chan";
-	cout << endl << " 34. Tinh tich cac so le";
-	cout << endl << " 35. Tinh tich cac so nguyen to";
-	cout << endl << " 36. Tinh tich cac so chinh phuong";
+	cout << endl << " 30. Tinh tich cac so duong";
+	cout << endl << " 31. Tinh tich cac so am";
+	cout << endl << " 32. Tinh tich cac so chan";
+	cout << endl << " 33. Tinh tich cac so le";
+	cout << endl << " 34. Tinh tich cac so nguyen to";
+	cout << endl << " 35. Tinh tich cac so chinh phuong";
 
 	cout << endl << "\n-------------------- END ------------------";
-
-
 }
 
 int ChonMenu(int soMenu) {
@@ -72,24 +70,20 @@ void XuLyMenu(Array a, int menu, int& n) {
 	case 0:
 		cout << endl << " 0. Thoat chuong trinh";
 		return;
-
 	case 1: 
 		cout << endl << " 1. Nhap mang tu dong";
 		NhapMangTuDong(a, n);
 		XuatMang(a, n);
 		break;
-		
 	case 2:
 		cout << endl << " 2. Nhap mang tu ban phim";
 		NhapMangTuKey(a, n);
 		XuatMang(a, n);
 		break;
-
 	case 3:
 		cout << endl << " 3. Xuat mang da nhap";
 		XuatMang(a, n);
 		break;
-
 	case 4:
 		cout << endl << " 4. Tim vi tri cua phan tu x nhap vao";
 		cout << endl << "\n Mang ban dau";
@@ -98,7 +92,6 @@ void XuLyMenu(Array a, int menu, int& n) {
 		cin >> x;
 		TimViTriCuaPhanTuXNhapVao(a, n, x);
 		break;
-
 	case 5:
 		cout << endl << "5. Tim nhap vao vi tri i xuat ra gia tri x trong mang";
 		cout << endl << "\n Xem mang ban dau";
@@ -111,7 +104,6 @@ void XuLyMenu(Array a, int menu, int& n) {
 		cin >> i;
 		NhapVaoViTriIXuatRaGiaTriX(a, n, x);
 		break;
-
 	case 6:
 		cout << endl << " 6. Tim gia tri nho nhat trong mang";
 		cout << endl << "\n Xem lai mang ban dau";
@@ -119,7 +111,6 @@ void XuLyMenu(Array a, int menu, int& n) {
 		kq = TimGiaTriNhoNhatTrongMang(a, n);
 		cout << endl << "\n Gia tri nho nhat trong mang la: " << kq;
 		break;
-
 	case 7:
 		cout << endl << " 7. Tim gia tri lon nhat trong mang";
 		cout << endl << "\n Xem laii mang ban dau";
@@ -127,49 +118,42 @@ void XuLyMenu(Array a, int menu, int& n) {
 		kq = TimGiaTriLonNhatTrongMang(a, n);
 		cout << endl << "\n Gia tri lon nhat trong mang la: " << kq;
 		break;
-
 	case 8:
 		cout << endl << " 8. Tim cac so le trong mang";
 		cout << endl << "\n Xem lai mang ban dau";
 		XuatMang(a, n);
 		TimSoLeTrongMang(a, n);
 		break;
-
 	case 9: 
 		cout << endl << "9. Tim cac chan trong mang";
 		cout << endl << "\n Xem lai mang ban dau";
 		XuatMang(a, n);
 		TimSoChanTrongMang(a, n);
 		break;
-
 	case 10:
 		cout << endl << " 10. Tim cac so am trong mang";
 		cout << endl << "\n Xem lai mang ban dau";
 		XuatMang(a, n);
 		TimSoAmTrongMang(a, n);
 		break;
-
 	case 11:
 		cout << endl << " 11. Tim cac so duong trong mang";
 		cout << endl << "\n Xem lai mang ban dau";
 		XuatMang(a, n);
 		TimSoDuongTrongMang(a, n);
 		break;
-
 	case 12:
 		cout << endl << " 12. Tim cac so nguyen to trong mang";
 		cout << endl << "\n Xem lai mang ban dau";
 		XuatMang(a, n);
 		XuatCacSoNguyenTo(a, n);
 		break;
-
 	case 13:
 		cout << endl << " 13. Tim cac so chinh phuong trong mang";
 		cout << endl << "\n Xem lai mang ban dau";
 		XuatMang(a, n);
 		XuatSoChinhPhuong(a, n);
 		break;
-
 	case 14:
 		cout << endl << " 14. Them gia tri x vao vi tri i";
 		cout << endl << "\n Xem mang ban dau";
@@ -185,7 +169,6 @@ void XuLyMenu(Array a, int menu, int& n) {
 		ThemGiaTriVaoViTri(a, n, x, vt);
 		XuatMang(a, n);
 		break;
-
 	case 15:
 		cout << endl << " 15. Them gia tri vao dau mang";
 		cout << endl << "\n Xem mang ban dau";
@@ -196,7 +179,6 @@ void XuLyMenu(Array a, int menu, int& n) {
 		cout << endl << "\n Mang sau khi them x = " << x << " cann them vao dau mang la: ";
 		XuatMang(a, n);
 		break;
-
 	case 16:
 		cout << endl << " 16. Them gia tri vao cuoi mang";
 		cout << endl << "\n Xem mang ban dau";
@@ -207,7 +189,6 @@ void XuLyMenu(Array a, int menu, int& n) {
 		cout << endl << "\n Mang sau khi them x = " << x << " vao vi tri cuoi mang la: ";
 		XuatMang(a, n);
 		break;
-
 	case 17:
 		cout << endl << " 17. Kiem tra gia tri x nhap vao co ton tai";
 		cout << endl << "\n Xem mang ban dau";
@@ -216,7 +197,6 @@ void XuLyMenu(Array a, int menu, int& n) {
 		cin >> x;
 		KiemTraGiaTriXTrongMang(a, n, x);
 		break;
-
 	case 18:
 		cout << endl << " 18. Kiem tra vi tri nhap vao co ton tai trong mang";
 		cout << endl << "\n Xem lai mang ban dau";
@@ -225,14 +205,12 @@ void XuLyMenu(Array a, int menu, int& n) {
 		cin >> vt;
 		KiemTraViTriCoTonTaiTrongMang(a, n, vt);
 		break;
-
 	case 19:
 		cout << endl << " 19. Kiem tra mang co phai so toan duong";
 		cout << endl << "\n Xem lai mang ban dau";
 		XuatMang(a, n);
 		KiemTraMangCoToanSoDuong(a, n);
 		break;
-
 	case 20:
 		cout << endl << " 20. Kiem tra cac so nguyen to trong mang";
 		cout << endl << "\n Xem mang ban dau";
@@ -240,7 +218,6 @@ void XuLyMenu(Array a, int menu, int& n) {
 		cout << endl << "\n Xuat mang cac so nguyen to";
 		XuatCacSoNguyenTo(a, n);
 		break;
-
 	case 21:
 		cout << endl << " 21. Kiem tra cac so chinh phuong trong mang";
 		cout << endl << "\n Xem mang ban dau";
@@ -248,7 +225,6 @@ void XuLyMenu(Array a, int menu, int& n) {
 		cout << endl << "\n Xuat mang cac so chinh phuong";
 		XuatSoChinhPhuong(a, n);
 		break;
-
 	case 22:
 		cout << endl << " 22. Sap xep mang tang dan";
 		cout << endl << "\n Xem mang ban dau";
@@ -257,7 +233,6 @@ void XuLyMenu(Array a, int menu, int& n) {
 		cout << endl << "\n Mang sau khi sap xep tang dan la:";
 		XuatMang(a, n);
 		break;
-
 	case 23:
 		cout << endl << " 23. Sap xep mang giam dan";
 		cout << endl << "\n Xem mang ban dau";
@@ -266,7 +241,6 @@ void XuLyMenu(Array a, int menu, int& n) {
 		cout << endl << "\n Mang sau khi sap xep giam dan la:";
 		XuatMang(a, n);
 		break;
-
 	case 24: 
 		cout << endl << " 24. Tinh tong cac so duong";
 		cout << endl << "\n Xem mang ban dau";
@@ -274,7 +248,6 @@ void XuLyMenu(Array a, int menu, int& n) {
 		kq = TinhTongCacSoDuong(a, n);
 		cout << endl << "\n Tong cua cac so duong trong mang la:  " << kq;
 		break;
-
 	case 25:
 		cout << endl << " 25. Tinh tong cac so am";
 		cout << endl << "\n Xem mang ban dau";
@@ -282,7 +255,6 @@ void XuLyMenu(Array a, int menu, int& n) {
 		kq = TinhTongCacSoAm(a, n);
 		cout << endl << "\n Tong cua cac so am trong mang la: " << kq;
 		break;
-
 	case 26:
 		cout << endl << " 26. Tinh tong cac so chan";
 		cout << endl << "\n Xem mang ban dau";
@@ -290,7 +262,6 @@ void XuLyMenu(Array a, int menu, int& n) {
 		kq = TinhTongCacSoChan(a, n);
 		cout << endl << "\n Tong cua cac so chan trong mang la:  " << kq;
 		break;
-
 	case 27:
 		cout << endl << " 27. Tinh tong cac so le";
 		cout << endl << "\n Xem mang ban dau";
@@ -298,7 +269,6 @@ void XuLyMenu(Array a, int menu, int& n) {
 		kq = TinhTongCacSoLe(a, n);
 		cout << endl << "\n Tong cua cac so le trong mang la: " << kq;
 		break;
-
 	case 28:
 		cout << endl << " 28. Tinh tong cac so nguyen to";
 		cout << endl << "\n Xem mang ban dau";
@@ -306,17 +276,55 @@ void XuLyMenu(Array a, int menu, int& n) {
 		kq = TinhTongCacSoNguyenTo(a, n);
 		cout << endl << "\n Tong cua cac so nguyen to trong mang la:  " << kq;
 		break;
-
 	case 29:
 		cout << endl << " 29. Tinh tong cac so chinh phuong";
 		cout << endl << "\n Xem mang ban dau";
 		XuatMang(a, n);
 		kq = TinhTongCacSoChinhPhuong(a, n);
-		cout << endl << "\n Tong cua cac so chinh phuong trong mang la:  ";
+		cout << endl << "\n Tong cua cac so chinh phuong trong mang la:  " << kq;
 		break;
-
-
-
+	case 30:
+		cout << endl << "30. Tinh tich cac so duong";
+		cout << endl << "\n Xem mang ban dau";
+		XuatMang(a, n);
+		kq = TinhTichCacSoDuong(a, n);
+		cout << endl << "\n Tich cac so duong trong mang la: " << kq;
+		break;
+	case 31: 
+		cout << endl << " 31. Tinh tich cac so am";
+		cout << endl << "\n Xem mang ban dau";
+		XuatMang(a, n);
+		kq = TinhTichCacSoAm(a, n);
+		cout << endl << "\n Tich cac so am trong mang la:  " << kq;
+		break;
+	case 32:
+		cout << endl << " 32. Tinh tich cac so chan";
+		cout << endl << "\n Xem mang ban dau";
+		XuatMang(a, n);
+		kq = TinhTichCacSoChan(a, n);
+		cout << endl << "\n Tich cac so chan trong mang la: " << kq;
+		break;
+	case 33:
+		cout << endl << " 33. TInh tich cac so le";
+		cout << endl << "\n Xem mang ban dau";
+		XuatMang(a, n);
+		kq = TinhTichCacSoLe(a, n);
+		cout << endl << "\n Tich cac so le trong mang la: " << kq;
+		break;
+	case 34: 
+		cout << endl << " 34. Tinh tich cac so nguyen to";
+		cout << endl << "\n Xem mang ban dau";
+		XuatMang(a, n);
+		kq = TinhTichCacSoNguyenTo(a, n);
+		cout << endl << "\n Tich cac so nguyen to trong mang la: " << kq;
+		break;
+	case 35:
+		cout << endl << " 35. Tinh tich cac so chinh phuong";
+		cout << endl << "\n Xem mang ban dau";
+		XuatMang(a, n);
+		kq = TinhTichCacSoChinhPhuong(a, n);
+		cout << endl << "\n Tich cac so chinh phuong trong mang la: " << kq;
+		break;
 	default:
 		break;
 	}
