@@ -369,3 +369,140 @@ int TinhTichCacSoChinhPhuong(Array a, int n) {
 	}
 	return tich;
 }
+
+// delete element array
+void XoaTaiViTri(Array a, int& n, int vt) {
+	for (int i = vt + 1; i < n; i++)
+	{
+		a[i - 1] = a[i];
+	}
+	n--;
+}
+void XoaGiaTriXTrongMangNhapVao(Array a, int& n, int x) {
+	for (int i = 0; i < n; i++)
+	{
+		if (a[i] == x) {
+			XoaTaiViTri(a, n, i);
+			i--;
+		}
+	}
+}
+void XoaDauMang(Array a, int& n) {
+	XoaTaiViTri(a, n, 0);
+}
+void XoaCuoiMang(Array a, int& n) {
+	XoaTaiViTri(a, n, n);
+}
+void XoaSoLonNhatTrongMang(Array a, int& n) {
+	cout << endl << "\n So max:\t";
+	int x = TimGiaTriLonNhatTrongMang(a, n);
+	for (int i = 0; i < n; i++)
+	{
+		if (a[i] == x) {
+			cout << a[i] << "\t";
+			XoaTaiViTri(a, n, i);
+			i--;
+		}
+	}
+}
+void XoaSoNhoNhatTrongMang(Array a, int& n) {
+	cout << endl << "\n So min:\t";
+	int x = TimGiaTriNhoNhatTrongMang(a, n);
+	for (int i = 0; i < n; i++)
+	{
+		if (a[i] == x) {
+			cout << a[i] << "\t";
+			XoaTaiViTri(a, n, i);
+			i--;
+		}
+	}
+}
+void XoaCacSoAmTrongMang(Array a, int& n) {
+	cout << endl << "\n So am: \t";
+	for (int i = 0; i < n; i++)
+	{
+		if (a[i] < 0) {
+			cout << a[i] << "\t";
+			XoaTaiViTri(a, n, i);
+			i--;
+		}
+	}
+}
+void XoaCacSoDuongTrongMang(Array a, int& n) {
+	cout << endl << "\n So duong:\t";
+	for (int i = 0; i < n; i++)
+	{
+		if (a[i] > 0) {
+			cout << a[i] << "\t";
+			XoaTaiViTri(a, n, i);
+			i--;
+		}
+	}
+}
+void XoaCacSoChanTrongMang(Array a, int& n) {
+	cout << endl << "\n So chan:\t";
+	for (int i = 0; i < n; i++)
+	{
+		if (a[i] % 2 == 0) {
+			cout << a[i] << "\t";
+			XoaTaiViTri(a, n, i);
+			i--;
+		}
+	}
+}
+void XoaCacSoLeTrongMang(Array a, int& n) {
+	cout << endl << "\n So le:\t";
+	for (int i = 0; i < n; i++)
+	{
+		if (a[i] % 1 != 0) {
+			cout << a[i] << "\t";
+			XoaTaiViTri(a, n, i);
+			i--;
+		}
+	}
+}
+void XoaCacSoLaSoChinhPhuong(Array a, int& n) {
+	cout << endl << "\n So chinh phuong:\t";
+	for (int i = 0; i < n; i++)
+	{
+		if (KiemTraSoChinhPhuong(a[i]) == true) {
+			cout << a[i] << "\t";
+			XoaTaiViTri(a, n, i);
+			i--;
+		}
+	}
+}
+void XoaCacSoLaSoNguyenTo(Array a,int& n) {
+	cout << endl << "\n Xuat so nguyen to:\t";
+	for (int i = 0; i < n; i++)
+	{
+		if (KiemTraSoNguyenTo(a[i])) {
+			cout << a[i] << "\t";
+			i--;
+		}
+	}
+}
+void XoaPhanTuTrungVoiXNhapVao(Array a, int& n, int x) {
+	for (int i = 0; i < n; i++)
+	{
+		if (a[i] == x) {
+			XoaTaiViTri(a, n, i);
+			i--;
+		}
+	}
+}
+void XoaCacSoTrungNhauTrongMang(Array a, int& n) {
+	cout << endl << "\n So trung nhau:\t";
+	for (int i = 0; i < n - 1; i++)
+	{
+		for (int j = i + 1; j < n; j++)
+		{
+			if (a[i] == a[j])
+			{
+				cout << a[i] << "\t";		// xuất ra giá trị các số trùng nhau  (*)
+				XoaTaiViTri(a, n, i);
+				i--;
+			}
+		}
+	}
+}

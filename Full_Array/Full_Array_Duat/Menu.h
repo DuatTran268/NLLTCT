@@ -43,6 +43,24 @@ void XuatMenu() {
 	cout << endl << " 33. Tinh tich cac so le";
 	cout << endl << " 34. Tinh tich cac so nguyen to";
 	cout << endl << " 35. Tinh tich cac so chinh phuong";
+	
+	// xóa delete
+	cout << endl << " 36. Xoa phan tu co chi so k (xoa vt) trong mang";
+	cout << endl << " 37. Xoa so co gia tri x nhap vao trong mang";
+	cout << endl << " 38. Xoa so gia tri x nhap vao trong mang";
+	cout << endl << " 39. Xoa phan tu dau mang va cuoi mang";
+	cout << endl << " 40. Xoa so lon nhat trong mang";
+	cout << endl << " 41. Xoa so nho nhat trong mang";
+	cout << endl << " 42. Xoa cac so am trong mang";
+	cout << endl << " 43. Xoa cac so duong trong mang";
+	cout << endl << " 44. Xoa cac so chan trong mang";
+	cout << endl << " 45. Xoa cac so le trong mang";
+	cout << endl << " 46. Xoa cac so chinh phuong trong mang";
+	cout << endl << " 47. Xoa cac so nguyen to trong mang";
+	cout << endl << " 48. Xoa phan tu trung voi x nhap vao";
+	cout << endl << " 49. Xoa cac so trung nhau va chi lay so xuat hien 1 lan";
+	cout << endl << " 50. Xoa tat ca cac phan tu xuat hien nhieu hon 1 lan";
+
 
 	cout << endl << "\n-------------------- END ------------------";
 }
@@ -325,6 +343,32 @@ void XuLyMenu(Array a, int menu, int& n) {
 		kq = TinhTichCacSoChinhPhuong(a, n);
 		cout << endl << "\n Tich cac so chinh phuong trong mang la: " << kq;
 		break;
+	case 36: 
+		cout << endl << " 36. Xoa phan tu co chi so k (xoa vt) trong mang";
+		cout << endl << "\n Xem mang ban dau";
+		XuatMang(a, n);
+		do
+		{
+			cout << endl << "\n Nhap vao vi tri can xoa trong mang";
+			cin >> vt;
+		} while (vt <= 0 || vt > n);
+		XoaTaiViTri(a, n, vt);
+		cout << endl << " Mang sau khi xoa tai vi tri = " << vt << " la: ";
+		XuatMang(a, n);
+		break;
+	case 37: 
+		cout << endl << " 37. Xoa so co gia tri x nhap vao trong mang";
+		cout << endl << "\n Xem mang ban dau";
+		XuatMang(a, n);
+		cout << endl << "\n Nhap vap gia tri x trong mang can xoa: x = ";
+		cin >> x;
+		XoaGiaTriXTrongMangNhapVao(a, n, x);
+		cout << endl << " Mang sau khi xoa vi tri x = " << x << " ra khoi mang la: ";
+		XuatMang(a, n);
+		break;
+	case 38:
+		cout << endl << " "
+
 	default:
 		break;
 	}
