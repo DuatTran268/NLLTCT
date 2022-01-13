@@ -9,7 +9,7 @@ using namespace std;
 
 void ChayChuongTrinh() {
 	int n = 0;
-	int menu, soMenu = 36;
+	int menu, soMenu = 50;
 	Array a;
 	do
 	{

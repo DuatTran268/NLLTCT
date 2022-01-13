@@ -349,7 +349,7 @@ void XuLyMenu(Array a, int menu, int& n) {
 		XuatMang(a, n);
 		do
 		{
-			cout << endl << "\n Nhap vao vi tri can xoa trong mang";
+			cout << endl << "\n Nhap vao vi tri can xoa trong mang:  ";
 			cin >> vt;
 		} while (vt <= 0 || vt > n);
 		XoaTaiViTri(a, n, vt);
@@ -367,8 +367,116 @@ void XuLyMenu(Array a, int menu, int& n) {
 		XuatMang(a, n);
 		break;
 	case 38:
-		cout << endl << " "
-
+		cout << endl << " 38. Xoa so co gia tri x nhap vao trong mang";
+		cout << endl << "\n Xem mang ban dau";
+		XuatMang(a, n);
+		cout << endl << "\n Nhap vao gia tri x trong mang can xoa:  ";
+		cin >> x;
+		XoaGiaTriXTrongMangNhapVao(a, n, x);
+		cout << endl << "\n Mang sau khi xoa vi tri x = " << x << " ra khoi mang la:";
+		XuatMang(a, n);
+		break;
+	case 39:
+		cout << endl << " 39. Xoa phan tu dau mang va cuoi mang";
+		cout << endl << "\n Xem mang ban dau ";
+		XuatMang(a, n);
+		cout << endl << "\n Xoa phan tu dau mang";
+		XoaDauMang(a, n);
+		XuatMang(a, n);
+		cout << endl << "\n Xoa phan tu cuoi mang";
+		XoaCuoiMang(a, n);
+		XuatMang(a, n);
+		break;
+	case 40:
+		cout << endl << " 40. Xoa so lon nhat trong mang";
+		cout << endl << "\n Xem mang ban dau";
+		XuatMang(a, n);
+		cout << endl << "\n Xoa so lon nhat trong mang";
+		XoaSoLonNhatTrongMang(a, n);
+		cout << endl << "\n Mang sau khi xoa so lon nhat trong mang";
+		XuatMang(a, n);
+		break;
+	case 41:
+		cout << endl << " 41. Xoa so nho nhat trong mang";
+		cout << endl << "\n Xem mang ban dau";
+		XuatMang(a, n);
+		cout << endl << "\n Xoa so nho nhat trong mang";
+		XoaSoNhoNhatTrongMang(a, n);
+		cout << endl << "\n Mang sau khi xoa so nho nhat trong mang";
+		XuatMang(a, n);
+		break;
+	case 42:
+		cout << endl << " 42. Xoa cac so am trong mang";
+		cout << endl << "\n Xem mang ban dau ";
+		XuatMang(a, n);
+		cout << endl << "\n Xoa so am trong mang";
+		XoaCacSoAmTrongMang(a, n);
+		cout << endl << "\n Mang sau khi xoa cac so am trong mang";
+		XuatMang(a, n);
+		break;
+	case 43:
+		cout << endl << " 43. Xoa cac so duong trong mang";
+		cout << endl << "\n Xem mang ban dau";
+		XuatMang(a, n);
+		XoaCacSoDuongTrongMang(a, n);
+		cout << endl << "\n Mang sau khi xoa so duong trong mang la";
+		XuatMang(a, n);
+		break;
+	case 44:
+		cout << endl << " 44. Xoa cac so chan trong mang";
+		cout << endl << "\n Xem mang ban dau";
+		XuatMang(a, n);
+		XoaCacSoChanTrongMang(a, n);
+		cout << endl << "\n Mang sau khi xoa cac so chan trong mang la";
+		XuatMang(a, n);
+		break;
+	case 45:
+		cout << endl << " 45. Xoa cac so le trong mang";
+		cout << endl << "\n Xem mang ban dau";
+		XuatMang(a, n);
+		XoaCacSoLeTrongMang(a, n);
+		cout << endl << "\n Mang sau khi xoa cac so le trong mang la";
+		XuatMang(a, n);
+		break;
+	case 46:
+		cout << endl << " 46. Xoa cac so chinh phuong trong mang";
+		cout << endl << "\n Xem mang ban dau";
+		XuatMang(a, n);
+		XoaCacSoLaSoChinhPhuong(a, n);
+		cout << endl << "\n Mang sau khi xoa cac so chinh phuong trong mang la";
+		XuatMang(a, n);
+		break;
+	case 47:
+		cout << endl << " 47. Xoa cac so nguyen to trong mang";
+		cout << endl << "\n Xem mang ban dau ";
+		XuatMang(a, n);
+		XoaCacSoLaSoNguyenTo(a, n);
+		cout << endl << "\n Mang sau khi xoa cac so nguyen to trong mang la";
+		XuatMang(a, n);
+		break;
+	case 48:
+		cout << endl << " 48. Xoa phan tu trung voi x nhap vao";
+		cout << endl << "\n Xem mang ban dau ";
+		XuatMang(a, n);
+		cout << endl << "\n Nhap vao gia tri x trong mang can xoa x =  ";
+		cin >> x;
+		XoaPhanTuTrungVoiXNhapVao(a, n, x);
+		cout << endl << "\n Mang sau khi xoa cac so trung voi x la";
+		XuatMang(a, n);
+		break;
+	case 49:
+		cout << endl << " 49. Xoa cac so trung nhau va chi lay so xuat hien 1 lan";
+		cout << endl << "\n Xem mang ban dau";
+		XuatMang(a, n);
+		XoaCacSoTrungNhauTrongMang(a, n);
+		cout << endl << "\n Mang sau khi xoa cac so trung nhau trong mang";
+		XuatMang(a, n);
+		break;
+	case 50:
+		cout << endl << " 50. Xoa tat ca cac phan tu xuat hien nhieu hon 1 lan";
+		cout << endl << "\n Xem mang ban dau";
+		XuatMang(a, n);
+		break;
 	default:
 		break;
 	}
