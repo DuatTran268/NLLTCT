@@ -1,3 +1,0 @@
-﻿  Source.cpp
-E:\GitHub\NLLTCT\Full_Array\Full_Array_Duat\ThuVien.h(133,8): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
-  Full_Array_Duat.vcxproj -> E:\GitHub\NLLTCT\Full_Array\x64\Debug\Full_Array_Duat.exe
